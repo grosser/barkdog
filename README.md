@@ -5,7 +5,7 @@ Barkdog is a tool to manage [Datadog monitors](http://docs.datadoghq.com/guides/
 It defines Datadog monitors using Ruby DSL, and updates monitors according to DSL.
 
 [![Gem Version](https://badge.fury.io/rb/barkdog.svg)](http://badge.fury.io/rb/barkdog)
-[![Build Status](https://travis-ci.org/winebarrel/barkdog.svg?branch=master)](https://travis-ci.org/winebarrel/barkdog)
+[![Build Status](https://travis-ci.org/codenize-tools/barkdog.svg?branch=master)](https://travis-ci.org/codenize-tools/barkdog)
 
 ## Notice
 * `>= 0.1.3`
