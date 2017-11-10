@@ -63,7 +63,7 @@ Usage: barkdog [options]
 ## Barkfile example
 
 ```ruby
-monitor "Check load avg", :type=>"metric alert" do
+monitor "Check load avg", type: "metric alert" do
   query "avg(last_5m):avg:ddstat.load_avg.1m{host:i-XXXXXXXX} > 1"
   message "@winebarrel@example.net"
   tags ["load", "host", "example"]
@@ -94,9 +94,9 @@ template "cpu template" do
   end
 end
 
-monitor "Check load avg", :type=>"metric alert" do
+monitor "Check load avg", type: "metric alert" do
   context.message = "@winebarrel@example.net"
-  include_template "cpu template", :target=>"ddstat"
+  include_template "cpu template", target: "ddstat"
 end
 
 template "basic monitor" do
@@ -110,8 +110,8 @@ template "basic monitor" do
 end
 
 "myhost".tap do |host|
-  include_template "basic monitor", :target=>host
-  include_template "mysql monitor", :target=>host
+  include_template "basic monitor", target: host
+  include_template "mysql monitor", target: host
   ...
 end
 ```
